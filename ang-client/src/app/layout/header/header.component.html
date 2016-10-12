@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header" *ngIf="!showProfile">
+      <a href (click)="$event.preventDefault()"
+        (click)="onShowProfile()"
+        class="navbar-brand profile-link">
+        mikias.net
+      </a>
+    </div>
+    <!--profile button-->
+    <!--<ul class="nav navbar-nav navbar-right">
+      <li class="navbar-link profile"
+        *ngIf="!showProfile">
+        <a href (click)="$event.preventDefault()"
+          (click)="onShowProfile()"
+          class="profile-link">
+          Profile
+        </a>
+      </li>
+    </ul>-->
+  </div>
+</nav>

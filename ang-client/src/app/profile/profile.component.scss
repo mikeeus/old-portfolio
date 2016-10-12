@@ -1,0 +1,41 @@
+.profile-pic{
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  background-color: #9C27B0;
+  border-radius: 50%;
+}
+.projects{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+// SMALL
+@media(max-width: 767px){
+  .project-ets{
+    background: #2196f3;
+    &:hover, &:focus, &:active{
+      background: #1c72b7;
+    }
+  }
+}
+// LARGE
+@media(min-width: 768px){
+  .projects{
+    display: none;
+  }
+}
+
+.ng-icon{
+  padding: 7px;
+  margin-left: -50px;
+  margin-top: -10px;
+}
+.ror-icon{
+  padding: 7px;
+  margin-left: -50px;
+  margin-top: -10px;
+}
+.canada{
+  padding-right: 30px;
+}

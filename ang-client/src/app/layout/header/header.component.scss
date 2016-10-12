@@ -1,0 +1,37 @@
+.navbar{
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0;
+  position: absolute;
+  z-index: 1001;
+  width: 100%;
+}
+.navbar-brand{
+  color: white;
+  font-weight: bold;
+  &:hover{
+    color: white;
+    background: #1b7ece;
+  }
+  &:focus, &:active{
+    background: #186fb5;
+  }
+}
+.navbar-nav{
+  .profile{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .navbar-link > a{
+    font-size: large;
+    &:hover {
+      background: #12445d;
+    }
+  }
+}
+// Large
+@media(min-width: 768px){
+  .profile{
+    display: none;
+  }
+}

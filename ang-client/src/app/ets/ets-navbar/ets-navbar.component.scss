@@ -1,0 +1,32 @@
+.navbar{
+  background: #2196f3;
+  border-radius: 3px;
+  font-family: 'Roboto', inherit;
+  border: 2px solid white;
+  font-size: larger;
+  a{
+   &:hover, &:active, &:focus{
+     background: #1f7cc5;
+     border-radius: 3px;     
+   }
+  }
+}
+.navbar-right{
+  width: 50%;
+}
+.navbar-li, .navbar-a {
+  width: 100%;
+}
+.caret{
+  float: right;
+  margin-top: 9px;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+  li > a {
+    font-size: large;
+  }
+}

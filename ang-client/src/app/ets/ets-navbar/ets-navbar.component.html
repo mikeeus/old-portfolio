@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"  target="_blank"
+      href="http://www.ethiotradestats.com">EthioTradeStats</a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+
+      <li class="dropdown navbar-li">
+        <a href (click)="$event.preventDefault()"
+           class="dropdown-toggle navbar-a" data-toggle="dropdown"
+           role="button" aria-expanded="false">
+          Select a country <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu scrollable-menu" role="menu">
+          <li *ngFor="let country of countries">
+            <a href (click)="$event.preventDefault()"
+              (click)="selectCountry(country)">{{country}}</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

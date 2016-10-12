@@ -1,0 +1,35 @@
+// loading
+.dot1{
+  animation: dot1 1s infinite;
+}
+.dot2 {
+  animation: dot2 1s infinite;
+}
+.dot3{
+  animation: dot3 1s infinite;
+}
+
+
+// PANEL
+.panel{
+  // background: white;
+  background: #2196f3;  
+  border-radius: 5px;
+}
+.panel-heading{
+  background: #2196f3;
+  color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-body{
+  border: 1px solid #2196f3;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;  
+}
+
+// ICONS
+.icon{
+  padding: 7px;
+  margin-right: 30px;
+}

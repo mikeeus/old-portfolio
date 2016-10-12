@@ -1,0 +1,56 @@
+// LOADING DOTS
+// dot1
+@-webkit-keyframes dot1 {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+@-moz-keyframes dot1 {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+@-o-keyframes dot1 {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+@keyframes dot1 {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+// dot2
+@-webkit-keyframes dot2 {
+  0%, 50%, 100% { opacity: 0.5; }
+  25% { opacity: 1; }
+  75% { opacity: 0; }
+}
+@-moz-keyframes dot2 {
+  0%, 50%, 100% { opacity: 0.5; }
+  25% { opacity: 1; }
+  75% { opacity: 0; }
+}
+@-o-keyframes dot2 {
+  0%, 50%, 100% { opacity: 0.5; }
+  25% { opacity: 1; }
+  75% { opacity: 0; }
+}
+@keyframes dot2 {
+  0%, 50%, 100% { opacity: 0.5; }
+  25% { opacity: 1; }
+  75% { opacity: 0; }
+}
+// dot3
+@-webkit-keyframes dot3 {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }    
+}
+@-moz-keyframes dot3 {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }    
+}
+@-o-keyframes dot3 {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }    
+}
+@keyframes dot3 {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }    
+}

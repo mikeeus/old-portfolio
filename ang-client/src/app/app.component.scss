@@ -1,0 +1,30 @@
+.page-wrapper{
+  height: 100%;
+}
+.rightbar{
+  height: 100%;
+  overflow-y: auto;
+  background: #2196f3;
+  color: white;
+  padding-top: 50px;
+}
+.leftbar{
+  padding-top: 50px;
+  height: 100%;
+  background-color: #12445d;
+}
+
+// SMALL
+@media(max-width: 767px){
+  .page-wrapper{
+    margin-left: 0 !important;
+  }
+  .leftbar{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    left: 0;
+    padding: 0;
+    padding-top: 50px;
+  }
+}

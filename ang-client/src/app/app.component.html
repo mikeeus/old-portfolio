@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="row page-wrapper">
+
+  <!--move to profile component-->
+  <div 
+    [@flyInOut]="profileState"
+    class="leftbar col-sm-4 text-center">
+    
+    <profile
+    ></profile>
+
+  </div>
+
+  <div class="rightbar col-sm-8">
+    <ets></ets>  
+  </div>
+
+</div>
