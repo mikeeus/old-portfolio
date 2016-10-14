@@ -1,22 +1,25 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header" *ngIf="!showProfile">
-      <a href (click)="$event.preventDefault()"
-        (click)="onShowProfile()"
-        class="navbar-brand profile-link">
-        mikias.net
+    <div class="navbar-header">
+      <a href 
+        [ngClass]="{'green': showProfile, 'blue': !showProfile}"
+        class="navbar-brand brand-icon" 
+        (click)="$event.preventDefault()">
+        <img src="/assets/site-icon.png" alt="site icon">
       </a>
+
     </div>
     <!--profile button-->
-    <!--<ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right">
       <li class="navbar-link profile"
         *ngIf="!showProfile">
-        <a href (click)="$event.preventDefault()"
-          (click)="onShowProfile()"
-          class="profile-link">
-          Profile
-        </a>
+      <a href 
+        (click)="$event.preventDefault()"
+        (click)="onShowProfile()"
+        class="profile-link">
+        back
+      </a>
       </li>
-    </ul>-->
+    </ul>
   </div>
 </nav>

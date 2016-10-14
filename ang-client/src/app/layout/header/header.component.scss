@@ -5,18 +5,28 @@
   z-index: 1001;
   width: 100%;
 }
-.navbar-brand{
-  color: white;
-  font-weight: bold;
+
+.blue{
   &:hover{
-    color: white;
     background: #1b7ece;
   }
   &:focus, &:active{
     background: #186fb5;
   }
 }
+.green{
+  &:hover{
+    background: #7aca6a;
+  }
+  &:focus, &:active{
+    background: #7aca6a;
+  }
+}
+.brand-icon{
+  padding-top: 6px;
+}
 .navbar-nav{
+  margin: 0;
   .profile{
     position: absolute;
     top: 0;

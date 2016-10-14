@@ -11,10 +11,16 @@
   height: 190px;
   width: 190px;
 }
+.profile-text{
+  color: #464644;
+}
 .projects{
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+.current-project{
+  color: #3c3e40;
 }
 // SMALL
 @media(max-width: 767px){
