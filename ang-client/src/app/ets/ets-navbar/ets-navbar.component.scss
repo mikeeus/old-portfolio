@@ -30,3 +30,13 @@
     font-size: large;
   }
 }
+@media(max-width: 767px){
+  .navbar-brand{
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-nav{
+    margin: 0;
+    width: 100%;
+  }
+}
