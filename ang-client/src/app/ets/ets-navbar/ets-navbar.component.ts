@@ -17,7 +17,6 @@ export class EtsNavbarComponent implements OnInit {
 
   selectCountry(country){
     this.onSelect.emit(country);
-    console.log('request sent to: ', country);
   }
 
 }

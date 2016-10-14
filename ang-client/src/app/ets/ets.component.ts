@@ -45,7 +45,6 @@ export class EtsComponent implements OnInit {
     this.store.dispatch({type: SHOW_CHART_LOADING});
 
     this.chartService.getCountryChart(country).subscribe(res => {
-      console.log('response received');
       this.store.dispatch({type: HIDE_CHART_LOADING});
       this.store.dispatch({ type: SET_COUNTRY_CHART, payload: res });
     });
