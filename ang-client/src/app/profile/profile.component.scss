@@ -5,11 +5,21 @@
   background-color: #ffe918;
   border-radius: 50%;
 }
-.profile-picture{
+.normal-pic{
+  opacity: 0.8;
+  position: absolute;
+  margin-left: -95px;
   border-radius: 50%;
   margin-top: 5px;
   height: 190px;
   width: 190px;
+}
+.eyebrow-pic{
+  opacity: 0.8;
+  position: absolute;
+  margin-left: -95px;
+  margin-top: 5px;
+  border-radius: 50%;
 }
 .profile-text{
   color: #464644;

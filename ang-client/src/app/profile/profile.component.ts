@@ -9,6 +9,7 @@ import { SHOW_PROFILE_PAGE, HIDE_PROFILE_PAGE, SHOW_ETS_PAGE, HIDE_ETS_PAGE, Pag
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  showBrow: boolean = false;
 
   constructor(
     private store: Store<any>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone, ElementRef } from '@angular/core';
 import { COUNTRIES } from './constants';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
@@ -19,7 +19,9 @@ export class EtsComponent implements OnInit {
 
   constructor(
     private store: Store<any>,
-    private chartService: ChartService
+    private chartService: ChartService,
+    private ngZone: NgZone,
+    private el: ElementRef
   ) {
     this.selectedCountry = this.store.select('selectedCountry');
     this.countryChart = this.store.select('countryChart');
@@ -35,6 +37,14 @@ export class EtsComponent implements OnInit {
       this.store.dispatch({type: HIDE_CHART_LOADING});
       this.store.dispatch({ type: SET_COUNTRY_CHART, payload: res });
     })
+
+    el.nativeElement.onmousewheel = (e) => {
+      ngZone.run(() => {
+        console.log('mousewheel: ', e);
+        console.log('DeltaX ', e.wheelDeltaX);
+        console.log('DeltaY ', e.wheelDeltaY);                
+      })
+    }
    }
 
   ngOnInit() {
@@ -49,5 +59,7 @@ export class EtsComponent implements OnInit {
       this.store.dispatch({ type: SET_COUNTRY_CHART, payload: res });
     });
   }
+
+  
 
 }

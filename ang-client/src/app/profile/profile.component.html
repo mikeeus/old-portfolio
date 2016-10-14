@@ -1,6 +1,10 @@
 <div class="col-sm-10 col-sm-offset-1">
-  <div class="profile-pic">
-    <img src="/assets/spiral-face.png" alt="mikias abera" class="profile-picture">
+  <div class="profile-pic"
+    (mouseleave)="showBrow = !showBrow">    
+    <img *ngIf="!showBrow"    
+      src="/assets/spiral-face.png" alt="mikias abera" class="normal-pic">
+    <img *ngIf="showBrow"
+      src="/assets/sup-face.png" alt="mikias abera" class="eyebrow-pic">    
   </div>
   <h1>mikias abera</h1>
   <div class="container-fluid profile-text">
