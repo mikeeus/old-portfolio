@@ -22,7 +22,9 @@ export class EtsComponent implements OnInit {
     private chartService: ChartService,
     private ngZone: NgZone,
     private el: ElementRef
-  ) {
+  ) { }
+
+  ngOnInit() {
     this.selectedCountry = this.store.select('selectedCountry');
     this.countryChart = this.store.select('countryChart');
     // Loading state
@@ -38,16 +40,13 @@ export class EtsComponent implements OnInit {
       this.store.dispatch({ type: SET_COUNTRY_CHART, payload: res });
     })
 
-    el.nativeElement.onmousewheel = (e) => {
-      ngZone.run(() => {
+    this.el.nativeElement.onmousewheel = (e) => {
+      this.ngZone.run(() => {
         // console.log('mousewheel: ', e);
         // console.log('DeltaX ', e.wheelDeltaX);
         // console.log('DeltaY ', e.wheelDeltaY);                
       })
     }
-   }
-
-  ngOnInit() {
   }
 
   onSelect(country){
