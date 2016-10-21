@@ -6,14 +6,14 @@ import { provideStore } from '@ngrx/store';
 import { PagesStateReducer } from './shared';
 import { HeaderComponent } from './layout';
 import { ProfileComponent } from './profile';
-import { EtsComponent } from './ets';
+import { EtsStubComponent } from './testing';
 
 describe('App: Portfolio', () => {
   let fixture, comp;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppComponent, HeaderComponent, ProfileComponent, EtsComponent ],
+      declarations: [ AppComponent, HeaderComponent, ProfileComponent, EtsStubComponent ],
       providers: [ provideStore({pagesState: PagesStateReducer}) ] 
     });
 
