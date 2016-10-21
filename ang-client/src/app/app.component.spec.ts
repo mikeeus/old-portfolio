@@ -2,28 +2,28 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { Store } from '@ngrx/store'; 
+import { provideStore } from '@ngrx/store';
+import { PagesStateReducer } from './shared';
 
 describe('App: Portfolio', () => {
+  let fixture, comp;
+
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-      providers: [
-        {provide: Store}
-      ] 
+      declarations: [ AppComponent ],
+      providers: [ provideStore({pagesState: PagesStateReducer}) ] 
     });
+
+    fixture = TestBed.createComponent(AppComponent);
+    comp = fixture.componentInstance;
+
+    comp.ngOnInit;
+
   });
 
+
   it('should create the app', async(() => {
-    let fixture = TestBed.overrideComponent(AppComponent, {
-      set: {
-        template: '<div class="hello">Hello</div>'
-      }
-    }).createComponent(AppComponent)
-    let app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(comp).toBeTruthy();
   }));
 
 });
