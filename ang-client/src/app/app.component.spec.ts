@@ -4,13 +4,16 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { provideStore } from '@ngrx/store';
 import { PagesStateReducer } from './shared';
+import { HeaderComponent } from './layout';
+import { ProfileComponent } from './profile';
+import { EtsComponent } from './ets';
 
 describe('App: Portfolio', () => {
   let fixture, comp;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppComponent ],
+      declarations: [ AppComponent, HeaderComponent, ProfileComponent, EtsComponent ],
       providers: [ provideStore({pagesState: PagesStateReducer}) ] 
     });
 
