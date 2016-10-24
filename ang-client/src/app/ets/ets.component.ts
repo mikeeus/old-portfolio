@@ -42,9 +42,9 @@ export class EtsComponent implements OnInit {
 
     this.el.nativeElement.onmousewheel = (e) => {
       this.ngZone.run(() => {
-        // console.log('mousewheel: ', e);
-        // console.log('DeltaX ', e.wheelDeltaX);
-        // console.log('DeltaY ', e.wheelDeltaY);                
+        console.log('mousewheel: ', e);
+        console.log('DeltaX ', e.wheelDeltaX);
+        console.log('DeltaY ', e.wheelDeltaY);                
       })
     }
   }
