@@ -1,15 +1,13 @@
 # Portfolio
 
-Simple portfolio to showcase my work. Built with angular 2 with an tiny express.js backend.
-
-I'll add future work to this site, so stay tuned if you like my stuff. :) 
+Simple portfolio to showcase my work. Built with Angular 2 and express.js back-end.
 
 ## Made with
 
 * Angular 2.0
 * Angular-cli 1.0.0-beta.16
-* Bootstrap 3.3.7
 * Express.js
+* Bootstrap 3.3.7
 
 
 ## Contact

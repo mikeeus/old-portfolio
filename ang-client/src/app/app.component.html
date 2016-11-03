@@ -1,11 +1,15 @@
-<Header></Header>
+<app-header></app-header>
 
 <div class="row page-wrapper">
 
   <!--move to profile component-->
-  <div [@flyInOut]="profileState"
+  <div 
+    [@flyInOut]="profileState"
     class="leftbar col-sm-4 text-center">
-    <profile></profile>
+    
+    <profile
+    ></profile>
+
   </div>
 
   <div class="rightbar col-sm-8">

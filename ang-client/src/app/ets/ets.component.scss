@@ -36,7 +36,7 @@
 
 // Scrollbar
 .scrollbar{
-  position: fixed;
+  position: absolute;
   background: rgba(255,255,255,0.3);
   height: 100%;
   width: 10px;
@@ -44,8 +44,7 @@
   right: 0;
 }
 .point{
-  position: relative;
-  height: 10%;
+  height: 20%;
   width: 10px;
   background: rgba(255,255,255,0.5);
 }

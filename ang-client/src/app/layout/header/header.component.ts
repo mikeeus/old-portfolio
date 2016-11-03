@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { SHOW_PROFILE_PAGE, HIDE_PROFILE_PAGE, SHOW_ETS_PAGE, HIDE_ETS_PAGE, PagesStateModel } from '../../shared';
 
 @Component({
-  selector: 'Header',
+  selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -15,14 +15,15 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private store: Store<any>
-  ) { }
-
-  ngOnInit() {
+  ) {
     this.pagesState = this.store.select('pagesState');
     this.pagesState.subscribe(res => {
       this.showProfile = res.showProfile;
       this.showEts = res.showEts;      
     });
+   }
+
+  ngOnInit() {
   }
 
   onShowProfile(){

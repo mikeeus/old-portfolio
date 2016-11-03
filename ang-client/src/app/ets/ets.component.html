@@ -1,69 +1,63 @@
-<div slimScroll 
-   background="#333" 
-   opacity="0.6" 
-   position="right" 
-   width="7px"
-   border-radius="5px">
-  <div class="row">
-    <div class="col-sm-10 col-sm-offset-1">
-    <!--INTRODUCTION-->
-      <h2 class="text-center">Ethio Trade Stats</h2>
-      <p>A web application that provides Ethiopian import and export trade information.</p>
-      <p>Try it out by selecting a country from the dropdown below. The chart data comes from the website's api.</p>
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+  <!--INTRODUCTION-->
+    <h2 class="text-center">Ethio Trade Stats</h2>
+    <p>A web application that provides Ethiopian import and export trade information.</p>
+    <p>Try it out by selecting a country from the dropdown below. The chart data comes from the website's api.</p>
 
-      <ets-navbar (onSelect)="onSelect($event)"></ets-navbar>
+    <ets-navbar (onSelect)="onSelect($event)"></ets-navbar>
 
-      <p>The chart below shows Ethiopia's annual import and export volume with the selected country in dollars. Hover over the bars to see exact values.</p>
+    <p>The chart below shows Ethiopia's annual import and export volume with the selected country in dollars. Hover over the bars to see exact values.</p>
 
-    <!--CHART-->
-      <div class="panel panel-defaul">
-        <div class="panel-heading text-center">
-          <h4 *ngIf="!showLoading">Ethiopia - {{selectedCountry | async}}</h4>
-          <h4 *ngIf="showLoading"
-            class="text-center">fetching data for {{selectedCountry | async }} 
-            <span class="dot1">.</span>
-            <span class="dot2">.</span>
-            <span class="dot3">.</span>
-          </h4>
-        </div>
-        <div class="panel-body">
-          <annual-chart [chartData]="countryChart | async"></annual-chart>
-        </div>
+  <!--CHART-->
+    <div class="panel panel-defaul">
+      <div class="panel-heading text-center">
+        <h4 *ngIf="!showLoading">Ethiopia - {{selectedCountry | async}}</h4>
+        <h4 *ngIf="showLoading"
+          class="text-center">fetching data for {{selectedCountry | async }} 
+          <span class="dot1">.</span>
+          <span class="dot2">.</span>
+          <span class="dot3">.</span>
+        </h4>
       </div>
-
-
-    <!--LANGUAGES USED-->
-      <div class="list-group">
-        <div class="list-group-item">
-          <span class="pull-left icon"><img src="/assets/icons/ng-icon.ico" alt="angular 2"></span>
-          <h4 class="list-group-item-heading">Front end</h4>
-          <div class="list-group-item-text">
-              Angular 2
-          </div>
-        </div>
-        <div class="list-group-item">
-          <span class="pull-left icon"><img src="/assets/icons/bs-icon.png" alt="bootstrap"></span>
-          <h4 class="list-group-item-heading">Styling</h4>        
-          <div class="list-group-item-text">
-            Bootstrap 3 with <a href="https://bootswatch.com/paper/">Paper theme</a>
-          </div>
-        </div>
-        <div class="list-group-item">
-          <span class="pull-left icon"><img src="/assets/icons/ror-icon.png" alt="ruby on rails"></span>
-          <h4 class="list-group-item-heading">Back end</h4>
-          <div class="list-group-item-text">
-            Ruby on Rails 5 --api
-          </div>
-        </div>
-        <div class="list-group-item">
-          <span class="pull-left icon"><img src="/assets/icons/pg-icon.png" alt="postgresql"></span>
-          <h4 class="list-group-item-heading">Database</h4>
-          <div class="list-group-item-text">
-            PostgreSQL on Amazon RDS
-          </div>  
-        </div>
+      <div class="panel-body">
+        <annual-chart [chartData]="countryChart | async"></annual-chart>
       </div>
     </div>
-  </div>
 
+
+  <!--LANGUAGES USED-->
+    <div class="list-group">
+      <div class="list-group-item">
+        <span class="pull-left icon"><img src="/assets/icons/ng-icon.ico" alt="angular 2"></span>
+        <h4 class="list-group-item-heading">Front end</h4>
+        <div class="list-group-item-text">
+            Angular 2
+        </div>
+      </div>
+      <div class="list-group-item">
+        <span class="pull-left icon"><img src="/assets/icons/bs-icon.png" alt="bootstrap"></span>
+        <h4 class="list-group-item-heading">Styling</h4>        
+        <div class="list-group-item-text">
+          Bootstrap 3 with <a href="https://bootswatch.com/paper/">Paper theme</a>
+        </div>
+      </div>
+      <div class="list-group-item">
+        <span class="pull-left icon"><img src="/assets/icons/ror-icon.png" alt="ruby on rails"></span>
+        <h4 class="list-group-item-heading">Back end</h4>
+        <div class="list-group-item-text">
+          Ruby on Rails 5 --api
+        </div>
+      </div>
+      <div class="list-group-item">
+        <span class="pull-left icon"><img src="/assets/icons/pg-icon.png" alt="postgresql"></span>
+        <h4 class="list-group-item-heading">Database</h4>
+        <div class="list-group-item-text">
+          PostgreSQL on Amazon RDS
+        </div>  
+      </div>
+    </div>
+
+  </div>
 </div>
+

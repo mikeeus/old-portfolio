@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit,
+import { Component, NgZone,
   trigger, state, style, transition, animate } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
@@ -19,7 +19,7 @@ import { PagesStateModel, SHOW_PROFILE_PAGE, SHOW_ETS_PAGE } from './shared';
     ])
   ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   pagesState: Observable<PagesStateModel>;
   showProfile: boolean;
   showEts: boolean;
@@ -28,9 +28,7 @@ export class AppComponent implements OnInit {
   constructor(
     private store: Store<any>,
     private ngZone: NgZone
-  ) { }
-
-  ngOnInit() {
+  ) {
     this.pagesState = this.store.select('pagesState');
     this.pagesState.subscribe(res => {
       this.showProfile = res.showProfile;
@@ -44,7 +42,7 @@ export class AppComponent implements OnInit {
 
     // Use NgZone to show profile if windowsize > 768px
     window.onresize = (e) => {
-      this.ngZone.run(() => {
+      ngZone.run(() => {
         if(window.innerWidth > 768 && this.showProfile == false) {
           this.store.dispatch({type: SHOW_PROFILE_PAGE});
         }

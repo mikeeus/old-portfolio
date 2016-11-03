@@ -2,31 +2,32 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { provideStore } from '@ngrx/store';
-import { PagesStateReducer } from './shared';
-import { HeaderComponent } from './layout';
-import { ProfileComponent } from './profile';
-import { EtsStubComponent } from './testing';
 
 describe('App: Portfolio', () => {
-  let fixture, comp;
-
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppComponent, HeaderComponent, ProfileComponent, EtsStubComponent ],
-      providers: [ provideStore({pagesState: PagesStateReducer}) ] 
+      declarations: [
+        AppComponent
+      ],
     });
-
-    fixture = TestBed.createComponent(AppComponent);
-    comp = fixture.componentInstance;
-
-    comp.ngOnInit;
-
   });
 
-
   it('should create the app', async(() => {
-    expect(comp).toBeTruthy();
+    let fixture = TestBed.createComponent(AppComponent);
+    let app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   }));
 
+  it(`should have as title 'app works!'`, async(() => {
+    let fixture = TestBed.createComponent(AppComponent);
+    let app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('app works!');
+  }));
+
+  it('should render title in a h1 tag', async(() => {
+    let fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    let compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+  }));
 });

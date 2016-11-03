@@ -7,4 +7,4 @@
 // }
 
 declare var System: any;
-declare var require;
+// declare var require: NodeRequire;

@@ -8,22 +8,6 @@ body {
   background: #12445d;
 }
 
-// scrollbar
-body::-webkit-scrollbar 
-{
- width: 15px;
-}
-body::-webkit-scrollbar-track 
-{
- -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
- border-radius:10px;
-}
-body::-webkit-scrollbar-thumb
-{
- background-color: orange;
- border-radius:10px;
-}
-
 // loading
 .loading{
   position: absolute;
@@ -40,5 +24,3 @@ body::-webkit-scrollbar-thumb
 .dot3{
   animation: dot3 1s infinite;
 }
-
-

@@ -16,16 +16,13 @@ export class EtsComponent implements OnInit {
   countryChart: Observable<any>;
   loadingState: Observable<LoadingStateModel>;
   showLoading: boolean = true;
-  scrollPosition: number = 0;
 
   constructor(
     private store: Store<any>,
     private chartService: ChartService,
     private ngZone: NgZone,
     private el: ElementRef
-  ) { }
-
-  ngOnInit() {
+  ) {
     this.selectedCountry = this.store.select('selectedCountry');
     this.countryChart = this.store.select('countryChart');
     // Loading state
@@ -39,7 +36,18 @@ export class EtsComponent implements OnInit {
     this.chartService.getCountryChart('China').subscribe(res => {
       this.store.dispatch({type: HIDE_CHART_LOADING});
       this.store.dispatch({ type: SET_COUNTRY_CHART, payload: res });
-    });
+    })
+
+    el.nativeElement.onmousewheel = (e) => {
+      ngZone.run(() => {
+        // console.log('mousewheel: ', e);
+        // console.log('DeltaX ', e.wheelDeltaX);
+        // console.log('DeltaY ', e.wheelDeltaY);                
+      })
+    }
+   }
+
+  ngOnInit() {
   }
 
   onSelect(country){
