@@ -23,6 +23,7 @@
     "@angular/router": "3.0.0",
     "@ngrx/core": "github:ngrx/core",
     "@ngrx/store": "github:ngrx/store",
+    "@types/node": "^6.0.46",
     "angular-cli": "1.0.0-beta.16",
     "bootstrap": "^3.3.7",
     "chart.js": "^2.2.2",
